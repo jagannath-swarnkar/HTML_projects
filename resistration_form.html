@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+	<title>resistration form</title>
+	<style type="text/css">
+		body{
+			display: flex;
+			justify-content: center;
+			background-color: lightyellow;
+		}
+		.container{
+			width: 300px;
+			background-color: aqua;
+			border: 1px solid blue;
+			padding: 2px
+		}
+		#header{
+			color: green;
+			text-align: center;
+			font-size: 30px;
+			margin: 4px
+		}
+		
+	</style>
+</head>
+<body>
+	<div class='container'>
+		<div>
+			<form action="#" onsubmit="return validation();" method="post">
+				<p id="header"><b>Resistration Form</b></p><hr>
+				E-mail:<br>
+				<input type="email" name="email" placeholder="abc@gmail.com" id="email" required ><br><br>
+				Phone Number:<br>
+				<input type="tel" name="telphone" id="tel"><br><br> 
+					<div id="nerror" style="color: red"></div>
+
+				Username:<br>
+				<input type="text" name="username" placeholder="navgurukul" id="username" required><br><br>
+					<div id="uerror" style="color: red"></div>
+
+				Password:<br>
+				<input type="Password" name="Password" id="Password" required><br><br>
+					<div id="error" style="color: red"></div>
+				First Name :<br>
+				<input type="text" name="firstname" placeholder="First Name" id="firstname"><br><br>
+				Last Name :<br>
+				<input type="text" name="lastname" placeholder="Last Name" id="lastname"><br><br>
+
+				<input type="submit" value="Submit">	
+			</form>
+
+		</div>
+		
+	</div>
+	
+<script type="text/javascript">
+  function validation(){
+	var Password = document.getElementById('Password').value;
+	var tel = document.getElementById('tel').value;
+	var username = document.getElementById('username').value;
+	var firstname = document.getElementById('firstname').value;
+	var lastname = document.getElementById('lastname').value;
+  var regex = /\d/g;
+// to check password conditons--
+  function hasUpperCase(str) {
+    return str.toLowerCase() != str;
+    }
+  function special_chr(password,chr){
+	for(var i of chr){
+		if(password.includes(i)){
+			return true
+		}
+	}return false;
+  }
+
+    if(!hasUpperCase(Password)){
+    document.getElementById('error').innerHTML = "Password must contain any upper case";
+    return false;
+  	}else if(Password.includes(' ')){
+  		document.getElementById('error').innerHTML = "Password must not contain any space";
+    	return false;
+  	}
+  	else if(!regex.test(Password)){
+  		document.getElementById('error').innerHTML = "Password must contain a number";
+    	return false;
+  	}else if(!special_chr(Password,'$*&%@#')){
+  		document.getElementById('error').innerHTML = "Password must contain any special chraracter ($*&%@#)";
+    	return false;
+  	}else if (special_chr(username,'#.$')){
+  		document.getElementById('uerror').innerHTML = "username must not contain ($ . #)";
+    	return false;
+  	}else if (tel.length!=10){
+  		document.getElementById('nerror').innerHTML = "number must contain 10 numbers only";
+    	return false;
+  	}
+
+  else{
+    return true;
+  }
+  }
+</script>
+
+</body>
+</html>
