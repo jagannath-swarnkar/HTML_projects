@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Image Galary</title>
+    <link rel="stylesheet" type="text/css" href="imageGalary.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" type="image/jpg" href="https://cdn5.vectorstock.com/i/1000x1000/58/44/gallery-app-icon-vector-19605844.jpg">
+</head>
+<body>
+	<div class="gallery-section">
+        <div class="inner-width">
+        	
+            <h1>My Gallery</h1>
+            <div class="border"></div>
+            <div class="gallery">
+                
+                <a href="https://images.pexels.com/photos/355296/pexels-photo-355296.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500" class="image ">
+                	<img src="https://images.pexels.com/photos/355296/pexels-photo-355296.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500" alt="">
+                </a>
+                <a href="https://image.shutterstock.com/image-photo/spring-blossom-background-beautiful-nature-260nw-1033292395.jpg" class="image">
+                	<img src="https://image.shutterstock.com/image-photo/spring-blossom-background-beautiful-nature-260nw-1033292395.jpg" alt="">
+                </a>
+                <a href="https://image.shutterstock.com/image-photo/little-flower-crocus-spring-rain-260nw-282732527.jpg" class="image">
+                	<img src="https://image.shutterstock.com/image-photo/little-flower-crocus-spring-rain-260nw-282732527.jpg" alt="">
+                </a>
+                <a href="http://acropolis.org.in/wp-content/uploads/2017/05/Talks-3_Key-to-happiness-02_WEBSITE-BANNER.jpg" class="image">
+                	<img src="http://acropolis.org.in/wp-content/uploads/2017/05/Talks-3_Key-to-happiness-02_WEBSITE-BANNER.jpg" alt="">
+                </a>
+                <a href="https://i.ytimg.com/vi/ScW0eteiQXQ/maxresdefault.jpg" class="image">
+                	<img src="https://i.ytimg.com/vi/ScW0eteiQXQ/maxresdefault.jpg" alt="">
+                </a>
+                <a href="http://www.sarkarinaukrisearch.in/wp-content/uploads/2018/12/nature-good-morning-images.jpg" class="image">
+                	<img src="http://www.sarkarinaukrisearch.in/wp-content/uploads/2018/12/nature-good-morning-images.jpg" alt="">
+                </a>
+                <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnPUVF59dx6sN3w1Ximv_5X8OPA1b1VfuNwu3xSMB6iXW0PcVwwA" class="image">
+                	<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnPUVF59dx6sN3w1Ximv_5X8OPA1b1VfuNwu3xSMB6iXW0PcVwwA" alt="">
+                </a>
+                <a href="https://img.freepik.com/free-photo/lightbulb-with-small-plant-soil-sunshine-concept-saving-energy-nature_34152-1351.jpg?size=626&ext=jpg" class="image">
+                	<img src="https://img.freepik.com/free-photo/lightbulb-with-small-plant-soil-sunshine-concept-saving-energy-nature_34152-1351.jpg?size=626&ext=jpg" alt="">
+                </a>
+                <a href="https://image.freepik.com/free-photo/young-plant-growing-with-sun-light-concept-ecology_34152-758.jpg" class="image">
+                	<img src="https://image.freepik.com/free-photo/young-plant-growing-with-sun-light-concept-ecology_34152-758.jpg" alt="">
+                </a>
+                <a href="http://cdn.towall.net/l/trees-trees-creative-nature-green.jpg" class="image">
+                	<img src="http://cdn.towall.net/l/trees-trees-creative-nature-green.jpg" alt="">
+                </a>
+
+            </div>
+        </div>
+    </div>
+    <script>
+    	$(".gallery").magnificPopup({
+    		delegate:'a',
+    		type:'image',
+    		gallery:{
+    			enabled:true
+    		}
+    	});
+    </script>
+</body>
+</html>
