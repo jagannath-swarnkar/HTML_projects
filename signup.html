@@ -1,0 +1,174 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
+<!-- pug: https://pugjs.org/ -->
+<!-- haml: http://haml.info/ -->
+<!-- hbs(handlebars): http://handlebarsjs.com/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Welcome to Glitch!</title>
+    <meta name="description" content="A cool thing made with Glitch">
+    <link id="favicon" rel="icon" href="https://comps.canstockphoto.com/initial-b-icon-eps-vector_csp49414547.jpg" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- import the webpage's stylesheet -->
+<!--     <link rel="stylesheet" href="/style.css"> -->
+    <style>
+      /* styles */
+/* called by your view template */
+body{
+  background-color: #c1bdba;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.form {
+
+  background-color: #13232f;
+  padding: 30px;
+  max-width:500px;
+  margin:40px auto;
+  box-shadow:0 4px 10px 4px;
+  
+}
+.tab-group {
+  list-style:none;
+  padding:0;
+  margin:0 0 40px 0;
+  display: flex;
+  font-weight:600;
+}
+.tab {
+  padding: 16px 94px;
+  /*margin: 20px;*/
+  border: 2px solid white;
+  /*font-size: 14px;*/
+  background-color: #1ab188;
+}
+a{
+  color: white;
+  text-decoration: none;
+}
+a:hover {
+    color:black;
+  }
+
+.field-wrap{
+  position:relative;
+  display: inline-grid;
+  margin-bottom:40px;
+}
+.top-row{
+  display: flex;
+  justify-content: space-between;
+
+}
+.tab-content{
+font-size: 20px;
+}
+.req{
+  font-size: 18px;
+  color: red;
+    margin:2px;
+}
+.box-size{
+  font-size: 20px;
+}
+.bl{
+  width: 340px;
+}
+.button-block {
+  display:block;
+  width:100%;
+}
+
+.button {
+  border:0;
+  outline:none;
+  border-radius:0;
+  padding:15px 0;
+  font-size:2rem;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  background:#1ab188;
+  color:#ffffff;
+ 
+}
+label {
+
+  left:13px;
+  color:white;
+  font-weight: 800;
+  font-size:22px;
+}
+h1 {
+  text-align:center;
+  color:white;
+  font-weight:300;
+  margin:0 0 40px;
+}
+    </style>
+    
+    <!-- import the webpage's client-side javascript file -->
+    <script src="/server.js" defer></script>
+  </head>
+  <body>
+    <div class="form">
+	<!-- for sign up and sign in text -->
+    <ul class="tab-group">
+    	<li class="tab active"><a href="#signup">Sign Up</a></li>
+        <li class="tab"><a href="https://peat-repair.glitch.me/login"> Log In</a></li>
+    </ul>
+      
+    <div class="tab-content">
+        <div id="signup">   
+          <h1>Sign Up for Free</h1>
+          
+	        <form action="/signup" method="POST">
+	          
+		        <div class="top-row">
+		            <div class="field-wrap">
+		              <label>
+		                Full Name<span class="req">*</span>
+		              </label>
+		              <input class="box-size bl" type="text" autocomplete="off" name="name"/>
+		            </div>
+		        </div>
+
+	         	<div class="field-wrap">
+		            <label>
+		              Email Address<span class="req">*</span>
+		            </label>
+	            	<input class="box-size bl" type="email" required autocomplete="off" name= "email"/>
+	          	</div>
+	          
+	          	<div class="field-wrap">
+		            <label>
+		              Set A Password<span class="req">*</span>
+		            </label>
+		            <input class="box-size bl" type="password" required autocomplete="off" name = "password"/>
+	          	</div>
+	          	
+	          	<div class="field-wrap">
+		            <label>
+		              Confirm Password<span class="req">*</span>
+		            </label>
+		            <input class="box-size bl" type="password" required autocomplete="off" name = "password2"/>
+	          	</div>
+	          
+            <button type="submit" class="button button-block"> Get Started </button>
+	          
+	        </form>
+
+        </div>   
+    </div> <!--/tab-content --> 
+      
+</div> <!-- /form -->
+  </body>
+</html>
