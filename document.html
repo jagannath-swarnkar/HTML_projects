@@ -9,12 +9,12 @@
 	<code>sudo modprobe -r rtl8723de && sleep 5 && sudo modprobe rtl8723de ant_sel=2</code>
 	<br/><br/>
 <h2>install WIFI driver in hp laptop (command for terminal) </h2>
-	<pre><code>
+	<code>
 	sudo apt remove bcmwl-kernel-source && sudo apt install git dkms
 	git clone -b extended https://github.com/lwfinger/rtlwifi_new.git
 	sudo dkms add ./rtlwifi_new
 	sudo dkms install rtlwifi-new/0.6
-	</code></pre>
+	</code>
 	<br/><hr/>OR<br/>
 	<pre><p>
 sudo apt-get install dkms git build-essential
