@@ -31,7 +31,14 @@ sudo make install
 
 <h2>For increasing the volume </h2>
 	<p>pactl set-sink-volume 0 +20%</p>
-
+	
+	<h2> mySQL </h2>
+<pre><code>
+sudo apt-get update
+sudo apt-get install mysql-server
+</pre></code>
+	
+	
 <h2>For installing google chrome</h2>
 	<pre><p> 
 sudo apt-get update
@@ -41,6 +48,9 @@ sudo apt-get install google-chrome-stable
 ------------------or---------------------
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo gdebi google-chrome-stable_current_amd64.deb
+sudo mysql -u root -p
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+
 </p></pre>
 
 <h2>For finding mac address</h2>
