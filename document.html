@@ -32,10 +32,12 @@ sudo make install
 <h2>For increasing the volume </h2>
 	<p>pactl set-sink-volume 0 +20%</p>
 	
-	<h2> mySQL </h2>
+	<h2> mySQL  installation and update password</h2>
 <pre><code>
 sudo apt-get update
 sudo apt-get install mysql-server
+sudo mysql -u root -p
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'new-password';
 </pre></code>
 	
 	
